@@ -2,9 +2,9 @@
 
 This is the source code for my personal portfolio website built with React.js. The website showcases my projects, skills, and experience.
 
-Live Demo
+## Live Demo
 
-👉 Click here to view the live portfolio
+Check out the live version here: [Portfolio Live Demo](https://portfolio-git-main-nishant18s-projects-b9a8ab29.vercel.app)
 
 ## Table of Contents
 
@@ -45,7 +45,6 @@ Live Demo
 
 2. Open your browser and navigate to `http://localhost:3000` to view the website.
 
-
 ## Features
 
 - Responsive design
@@ -60,5 +59,3 @@ Live Demo
 - CSS
 - Bootstrap
 - React Icons
-
-
