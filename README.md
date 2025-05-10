@@ -6,15 +6,6 @@ This is the source code for my personal portfolio website built with React.js. T
 
 Check out the live version here: [Portfolio Live Demo](https://portfolio-nishant18s-projects-b9a8ab29.vercel.app/)
 
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [License](#license)
-
 ## Installation
 
 1. Clone the repository:
