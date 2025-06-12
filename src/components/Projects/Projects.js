@@ -48,7 +48,7 @@ function Projects() {
               imgPath={AskIQ}
               isBlog={false}
               title="AskIQ"
-              description="A AskIQ built with React.js and Tailwind CSS, offering a seamless food ordering experience. Features include restaurant listings, real-time menu updates, user authentication, cart management, and a sleek UI for fast and efficient food delivery services."
+              description="AskIQ is a smart AI-powered chat app built with React and Vite, offering fast and responsive user interaction. It features markdown support, chat history, dark/light mode, and a clean, mobile-friendly UI."
               ghLink="https://github.com/nishant1810/AskIQ"             
             />
           </Col>
