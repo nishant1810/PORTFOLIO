@@ -18,6 +18,10 @@ function ProjectCards(props) {
           {props.isBlog ? "Blog" : "GitHub"}
         </Button>
         {"\n"}
+        <Button variant="primary" href={props.ghLink} target="_blank">
+          <BsGithub /> &nbsp;
+          {props.isBlog ? "Blog" : "Demo"}
+        </Button>
         {"\n"}
 
         {!props.isBlog && props.demoLink && (
