@@ -24,28 +24,49 @@ function Projects() {
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
 
-          <Col md={4} className="SaloonService">
-  <ProjectCard
-    imgPath={spendWise}
-    isBlog={false}
-    title="Saloon Service"
-    description="An intuitive salon management system that allows users to book appointments, manage services, track staff schedules, and provide customer feedback for a seamless salon experience."
-    ghLink="https://github.com/nishant1810/saloonServices"
-    DemoLink=""
-  />
-</Col>
+      <Col md={4} className="CardamomLeafDiseaseDetection">
+        <ProjectCard
+           imgPath={cardamon}
+           isBlog={false}
+           title="Cardamom Leaf Disease Detection"
+           description="An intuitive salon management system that allows users to book appointments, manage services, track staff schedules, and provide customer feedback for a seamless salon experience."
+           ghLink="https://github.com/nishant1810/Cardamom-Leaf-Disease-Detection"
+           DemoLink=""
+        />
+      </Col>
 
-<Col md={4} className="DjangoWebApp">
-  <ProjectCard
-    imgPath={spendWise}
-    isBlog={false}
-    title="Django Web App"
-    description="A web application built with Django that demonstrates full-stack capabilities including user authentication, CRUD operations, and dynamic content management for real-world use cases."
-    ghLink="https://github.com/nishant1810/Django-Web-App"
-    DemoLink=""
-  />
-</Col>
+       <Col md={4} className="RescueMeal">
+            <ProjectCard
+              imgPath={RescueMeal}
+              isBlog={false}
+              title="RescueMeal"
+              description=" A web platform designed to reduce food waste by connecting food donors, NGOs, and individuals in need. It enables users to list surplus food, find nearby donation centers, and track donations in real time, ensuring efficient food redistribution."
+              ghLink="https://github.com/nishant1810/Food-Rescue"
+              DemoLink="" 
+            />
+          </Col>
 
+          <Col md={4} className="AskIQ">
+            <ProjectCard
+              imgPath={AskIQ}
+              isBlog={false}
+              title="AskIQ"
+              description="AskIQ is a smart AI-powered chat app built with React and Vite, offering fast and responsive user interaction. It features markdown support, chat history, dark/light mode, and a clean, mobile-friendly UI."
+              ghLink="https://github.com/nishant1810/AskIQ"  
+              DemoLink=""                       
+            />
+          </Col>
+                
+          <Col md={4} className="DjangoWebApp">
+            <ProjectCard
+              imgPath={spendWise}
+              isBlog={false}
+              title="Django Web App"
+              description="A web application built with Django that demonstrates full-stack capabilities including user authentication, CRUD operations, and dynamic content management for real-world use cases."
+              ghLink="https://github.com/nishant1810/Django-Web-App"
+              DemoLink=""
+            />
+          </Col>
 
           <Col md={4} className="QuickBite">
             <ProjectCard
@@ -68,17 +89,6 @@ function Projects() {
             />
           </Col>
 
-          <Col md={4} className="AskIQ">
-            <ProjectCard
-              imgPath={AskIQ}
-              isBlog={false}
-              title="AskIQ"
-              description="AskIQ is a smart AI-powered chat app built with React and Vite, offering fast and responsive user interaction. It features markdown support, chat history, dark/light mode, and a clean, mobile-friendly UI."
-              ghLink="https://github.com/nishant1810/AskIQ"  
-              DemoLink=""                       
-            />
-          </Col>
-
           <Col md={4} className="Shrinkyfy">
             <ProjectCard
               imgPath={Shrinkyfy}
@@ -90,16 +100,6 @@ function Projects() {
             />
           </Col>
 
-          <Col md={4} className="RescueMeal">
-            <ProjectCard
-              imgPath={RescueMeal}
-              isBlog={false}
-              title="RescueMeal"
-              description=" A web platform designed to reduce food waste by connecting food donors, NGOs, and individuals in need. It enables users to list surplus food, find nearby donation centers, and track donations in real time, ensuring efficient food redistribution."
-              ghLink="https://github.com/nishant1810/Food-Rescue"
-              DemoLink="" 
-            />
-          </Col>
 
           <Col md={4} className="SchemeHub">
             <ProjectCard
