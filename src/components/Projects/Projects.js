@@ -7,6 +7,7 @@ import balloonBurst from "../../Assets/Projects/BalloonBurst.png";
 import schemeHub from "../../Assets/Projects/SchemeHub.jpg";
 import QuickBite from "../../Assets/Projects/QuickBite.png";
 import spendWise from "../../Assets/Projects/SpendWise.png";
+import cardamon from "../../Assets/Projects/cardamon.png";
 import AskIQ from "../../Assets/Projects/AskIQ.png";
 import Shrinkyfy from "../../Assets/Projects/Shrinkyfy.png";
 import RescueMeal from "../../Assets/Projects/RescueMeal.png";
@@ -25,15 +26,16 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
 
       <Col md={4} className="CardamomLeafDiseaseDetection">
-        <ProjectCard
-           imgPath={cardamon}
-           isBlog={false}
-           title="Cardamom Leaf Disease Detection"
-           description="An intuitive salon management system that allows users to book appointments, manage services, track staff schedules, and provide customer feedback for a seamless salon experience."
-           ghLink="https://github.com/nishant1810/Cardamom-Leaf-Disease-Detection"
-           DemoLink=""
-        />
-      </Col>
+  <ProjectCard
+    imgPath={cardamon}
+    isBlog={false}
+    title="Cardamom Leaf Disease Detection"
+    description="A deep learning-based system to classify cardamom leaf diseases using CNN and transfer learning models (VGG16/VGG19). Achieved 93.7% accuracy and enabled real-time disease prediction with explainability through Grad-CAM."
+    ghLink="https://github.com/nishant1810/Cardamom-Leaf-Disease-Detection"
+    DemoLink=""
+  />
+</Col>
+
 
        <Col md={4} className="RescueMeal">
             <ProjectCard
