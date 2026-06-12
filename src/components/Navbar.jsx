@@ -10,12 +10,10 @@ import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
-  AiFillGithub,
 } from "react-icons/ai";
 
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaBriefcase, FaAward } from "react-icons/fa";
 import { CgFileDocument } from "react-icons/cg";
-import { SiLeetcode } from "react-icons/si";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -23,7 +21,11 @@ function NavBar() {
 
   useEffect(() => {
     const scrollHandler = () => {
-      updateNavbar(window.scrollY >= 20);
+      if (window.scrollY >= 20) {
+        updateNavbar(true);
+      } else {
+        updateNavbar(false);
+      }
     };
 
     window.addEventListener("scroll", scrollHandler);
@@ -37,36 +39,37 @@ function NavBar() {
     <Navbar
       expanded={expand}
       fixed="top"
-      expand="md"
+      expand="lg"
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        {/* Logo */}
+        {/* Logo + Name */}
         <Navbar.Brand
           as={Link}
           to="/"
           className="d-flex align-items-center"
+          onClick={() => updateExpanded(false)}
         >
           <img
             src={logo}
             alt="Nishant Gaur"
             className="navbar-logo"
           />
+
+          <span className="brand-name ms-2">
+            Nishant Gaur
+          </span>
         </Navbar.Brand>
 
+        {/* Bootstrap Hamburger */}
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
-          onClick={() => updateExpanded(expand ? false : "expanded")}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </Navbar.Toggle>
+          onClick={() => updateExpanded(expand ? false : true)}
+        />
 
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
 
-            {/* Home */}
             <Nav.Item>
               <Nav.Link
                 as={Link}
@@ -77,7 +80,6 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
-            {/* About */}
             <Nav.Item>
               <Nav.Link
                 as={Link}
@@ -88,7 +90,6 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
-            {/* Projects */}
             <Nav.Item>
               <Nav.Link
                 as={Link}
@@ -99,7 +100,26 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
-            {/* Resume */}
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/experience"
+                onClick={() => updateExpanded(false)}
+              >
+                <FaBriefcase /> Experience
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/leadership"
+                onClick={() => updateExpanded(false)}
+              >
+                <FaAward /> Leadership
+              </Nav.Link>
+            </Nav.Item>
+
             <Nav.Item>
               <Nav.Link
                 as={Link}
@@ -109,45 +129,6 @@ function NavBar() {
                 <CgFileDocument /> Resume
               </Nav.Link>
             </Nav.Item>
-
-            {/* GitHub
-            <Nav.Item>
-              <Nav.Link
-                href="https://github.com/nishant1810"
-                target="_blank"
-                rel="noreferrer"
-                title="GitHub"
-                className="social-navbar-icon"
-              >
-                <AiFillGithub />
-              </Nav.Link>
-            </Nav.Item>
-
-            {/* LinkedIn */}
-            {/* <Nav.Item>
-              <Nav.Link
-                href="https://www.linkedin.com/in/nishant-gaur-555120268/"
-                target="_blank"
-                rel="noreferrer"
-                title="LinkedIn"
-                className="social-navbar-icon"
-              >
-                <FaLinkedinIn />
-              </Nav.Link>
-            </Nav.Item> */}
-
-            {/* LeetCode */}
-            {/* <Nav.Item>
-              <Nav.Link
-                href="https://leetcode.com/u/Nishant1810/"
-                target="_blank"
-                rel="noreferrer"
-                title="LeetCode"
-                className="social-navbar-icon"
-              >
-                <SiLeetcode />
-              </Nav.Link>
-            </Nav.Item>  */}
 
           </Nav>
         </Navbar.Collapse>

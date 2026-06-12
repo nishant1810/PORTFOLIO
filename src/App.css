@@ -68,10 +68,6 @@
   transform: translateY(-6px);
 }
 
-/* ========================================
-   TOOLTIP
-======================================== */
-
 .tech-tooltip {
   position: absolute;
 
@@ -124,24 +120,32 @@
 }
 
 /* ========================================
-   NAVBAR LOGO
+   NAVBAR
 ======================================== */
 
 .navbar-logo {
-  height: 42px;
+  height: 50px;
   width: auto;
   object-fit: contain;
+  transition: 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .navbar-logo {
-    height: 36px;
-  }
+.navbar-logo:hover {
+  transform: scale(1.08);
 }
 
-/* ========================================
-   NAVBAR SOCIAL ICONS
-======================================== */
+.brand-name {
+  color: white;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.navbar-nav .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
 
 .social-navbar-icon {
   font-size: 1.4rem !important;
@@ -159,22 +163,161 @@
 }
 
 /* ========================================
-   NAVBAR ICON SPACING
+   TIMELINE
 ======================================== */
 
-.navbar-nav .nav-link {
-  display: flex;
-  align-items: center;
-  gap: 6px;
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 60px auto;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: #c770f0;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 70px;
+  margin-bottom: 50px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 8px;
+  top: 10px;
+
+  width: 28px;
+  height: 28px;
+
+  border-radius: 50%;
+  background: #c770f0;
+  border: 4px solid white;
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: 25px;
+
+  text-align: left;
+
+  box-shadow: 0 0 15px rgba(199, 112, 240, 0.3);
+
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(199, 112, 240, 0.5);
+}
+
+.timeline-content h3 {
+  color: white;
+  margin-bottom: 5px;
+}
+
+.timeline-content span {
+  color: #bdbdbd;
+  font-size: 14px;
+}
+
+.timeline-content p {
+  color: white;
+  margin-top: 15px;
+  line-height: 1.8;
+}
+
+/* ========================================
+   EXPERIENCE BULLETS
+======================================== */
+
+.experience-list {
+  margin-top: 15px;
+  padding-left: 25px;
+
+  color: white;
+
+  list-style-type: disc;
+}
+
+.experience-list li {
+  margin-bottom: 10px;
+  line-height: 1.7;
+}
+
+.react-activity-calendar {
+  max-width: 100%;
+}
+
+.react-activity-calendar text {
+  fill: #ffffff !important;
+}
+
+.react-activity-calendar rect {
+  rx: 3;
 }
 
 /* ========================================
    MOBILE RESPONSIVENESS
 ======================================== */
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
+  .navbar-nav .nav-link::after,
+  .navbar-nav .nav-item::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  .navbar {
+    background: #181428 !important;
+    padding: 12px 18px !important;
+  }
+
+  .navbar-collapse {
+    margin-top: 15px;
+    background: rgba(24, 20, 40, 0.98);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .navbar-nav {
+    width: 100%;
+  } 
+
+  .navbar-nav .nav-item {
+    margin: 10px 0;
+  }
+
+  .navbar-nav .nav-link {
+    justify-content: center;
+    font-size: 1.1rem;
+    padding: 12px;
+  }
+
+  .navbar-logo {
+    height: 50px;
+  }
+
+  .brand-name {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+
   .tech-icons svg {
     font-size: 3rem;
+  }
+
+  .project-card-img {
+    height: 180px;
   }
 
   .social-navbar-icon {
@@ -182,7 +325,22 @@
     font-size: 1.3rem !important;
   }
 
-  .project-card-img {
-    height: 180px;
+  .timeline::before {
+    left: 15px;
   }
-}
+
+  .timeline-item {
+    padding-left: 50px;
+  }
+
+  .timeline-dot {
+    left: 3px;
+  }
+
+  .timeline-content {
+    padding: 18px;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.4rem;
+  }

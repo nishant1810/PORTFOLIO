@@ -1,20 +1,23 @@
 import React, { useState, useEffect } from "react";
+
 import Preloader from "./components/Pre.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Home from "./components/Home/Home.jsx";
 import About from "./components/About/About.jsx";
 import Projects from "./components/Projects/Projects.jsx";
-import Footer from "./components/Footer.jsx";
+import Experience from "./components/Experience/Experience.jsx";
+import Leadership from "./components/Leadership/Leadership";
 import Resume from "./components/Resume/ResumeNew.jsx";
+import Footer from "./components/Footer.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
+
 
 import {
   BrowserRouter as Router,
-  Route,
   Routes,
+  Route,
   Navigate,
 } from "react-router-dom";
-
-import ScrollToTop from "./components/ScrollToTop.jsx";
 
 import "./style.css";
 import "./App.css";
@@ -35,16 +38,33 @@ function App() {
     <Router>
       <Preloader load={load} />
 
-      <div className="App" id={load ? "no-scroll" : "scroll"}>
+      <div
+        className="App"
+        id={load ? "no-scroll" : "scroll"}
+      >
         <Navbar />
+
         <ScrollToTop />
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/project" element={<Projects />} />
+
           <Route path="/about" element={<About />} />
+
+          <Route path="/project" element={<Projects />} />
+
+          <Route
+            path="/experience" element={<Experience />}
+          />
+
+          <Route path="/leadership" element={<Leadership />} />
+
           <Route path="/resume" element={<Resume />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
+
+          <Route
+            path="*"
+            element={<Navigate to="/" replace />}
+          />
         </Routes>
 
         <Footer />

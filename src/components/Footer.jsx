@@ -1,10 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import {
-  AiFillGithub,
-  AiFillInstagram,
-} from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 function Footer() {
   let date = new Date();
@@ -42,12 +40,11 @@ function Footer() {
             </li>
             <li className="social-icons">
               <a
-                href="https://www.instagram.com/gaur_nishant_oozo/"
+                href="mailto:gaur18nishant@gmail.com"
                 style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
+                title="Email Me"
               >
-                <AiFillInstagram />
+                <MdEmail />
               </a>
             </li>
           </ul>
