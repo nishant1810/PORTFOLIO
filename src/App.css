@@ -1,0 +1,188 @@
+/* ========================================
+   APP
+======================================== */
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========================================
+   TECH STACK & TOOL STACK
+======================================== */
+
+.tech-icons {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.tech-icons svg {
+  font-size: 4rem;
+}
+
+.tech-icons:hover {
+  transform: translateY(-6px);
+}
+
+/* ========================================
+   TOOLTIP
+======================================== */
+
+.tech-tooltip {
+  position: absolute;
+
+  bottom: -35px;
+  left: 50%;
+
+  transform: translateX(-50%) translateY(5px);
+
+  background: #6f42c1;
+  color: #fff;
+
+  padding: 5px 10px;
+  border-radius: 6px;
+
+  font-size: 0.8rem;
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: all 0.3s ease;
+
+  z-index: 1000;
+}
+
+.tech-icons:hover .tech-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ========================================
+   PROJECT CARDS
+======================================== */
+
+.project-card-view {
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.project-card-view:hover {
+  transform: translateY(-8px);
+}
+
+.project-card-img {
+  height: 220px;
+  object-fit: cover;
+}
+
+/* ========================================
+   NAVBAR LOGO
+======================================== */
+
+.navbar-logo {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .navbar-logo {
+    height: 36px;
+  }
+}
+
+/* ========================================
+   NAVBAR SOCIAL ICONS
+======================================== */
+
+.social-navbar-icon {
+  font-size: 1.4rem !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s ease;
+}
+
+.social-navbar-icon:hover {
+  color: #c770f0 !important;
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   NAVBAR ICON SPACING
+======================================== */
+
+.navbar-nav .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ========================================
+   MOBILE RESPONSIVENESS
+======================================== */
+
+@media (max-width: 768px) {
+  .tech-icons svg {
+    font-size: 3rem;
+  }
+
+  .social-navbar-icon {
+    justify-content: flex-start;
+    font-size: 1.3rem !important;
+  }
+
+  .project-card-img {
+    height: 180px;
+  }
+}
